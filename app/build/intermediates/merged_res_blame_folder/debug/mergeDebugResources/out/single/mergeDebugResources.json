@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "com.athallah.hybridfit.app-debug-66:/drawable_gym_focus_upper_body.jpg.flat",
+        "source": "com.athallah.hybridfit.app-main-68:/drawable/gym_focus_upper_body.jpg"
+    },
+    {
+        "merged": "com.athallah.hybridfit.app-debug-66:/mipmap-anydpi_ic_launcher.xml.flat",
+        "source": "com.athallah.hybridfit.app-main-68:/mipmap-anydpi/ic_launcher.xml"
+    },
+    {
+        "merged": "com.athallah.hybridfit.app-debug-66:/xml_backup_rules.xml.flat",
+        "source": "com.athallah.hybridfit.app-main-68:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.athallah.hybridfit.app-debug-66:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.athallah.hybridfit.app-main-68:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.athallah.hybridfit.app-debug-66:/mipmap-anydpi_ic_launcher_round.xml.flat",
+        "source": "com.athallah.hybridfit.app-main-68:/mipmap-anydpi/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.athallah.hybridfit.app-debug-66:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.athallah.hybridfit.app-main-68:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.athallah.hybridfit.app-debug-66:/xml_data_extraction_rules.xml.flat",
+        "source": "com.athallah.hybridfit.app-main-68:/xml/data_extraction_rules.xml"
+    }
+]

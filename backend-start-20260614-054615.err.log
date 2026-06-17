@@ -1,0 +1,2 @@
+Port 3000 sedang dipakai proses lain. Tutup proses yang memakai port tersebut, atau jalankan server di port lain.
+Contoh: dari folder HybridFit jalankan `npm run start:3001`.
