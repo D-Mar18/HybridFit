@@ -1,0 +1,231 @@
+<!DOCTYPE html><html class="light" lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
+<title>OceanFit - Workout Detail</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Hanken+Grotesk:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-primary-fixed-variant": "#0040a2",
+                "primary-fixed": "#dae2ff",
+                "surface-bright": "#f7f9fb",
+                "primary": "#003d9b",
+                "surface-dim": "#d8dadc",
+                "on-secondary-fixed": "#002022",
+                "on-error-container": "#93000a",
+                "secondary-fixed": "#74f5ff",
+                "surface-container": "#eceef0",
+                "secondary-container": "#00f1fe",
+                "on-secondary-container": "#006a70",
+                "secondary": "#00696f",
+                "inverse-surface": "#2d3133",
+                "primary-fixed-dim": "#b2c5ff",
+                "on-primary-container": "#c4d2ff",
+                "surface-variant": "#e0e3e5",
+                "surface": "#f7f9fb",
+                "tertiary": "#29436b",
+                "surface-container-high": "#e6e8ea",
+                "on-background": "#191c1e",
+                "inverse-on-surface": "#eff1f3",
+                "surface-tint": "#0c56d0",
+                "surface-container-lowest": "#ffffff",
+                "on-surface": "#191c1e",
+                "on-error": "#ffffff",
+                "tertiary-container": "#425b84",
+                "on-primary": "#ffffff",
+                "tertiary-fixed": "#d6e3ff",
+                "surface-container-highest": "#e0e3e5",
+                "on-tertiary": "#ffffff",
+                "error": "#ba1a1a",
+                "outline": "#737685",
+                "on-tertiary-fixed": "#001b3d",
+                "tertiary-fixed-dim": "#aec7f6",
+                "on-tertiary-container": "#bcd3ff",
+                "on-secondary": "#ffffff",
+                "outline-variant": "#c3c6d6",
+                "background": "#f7f9fb",
+                "secondary-fixed-dim": "#00dbe7",
+                "on-surface-variant": "#434654",
+                "on-tertiary-fixed-variant": "#2d476f",
+                "on-primary-fixed": "#001848",
+                "inverse-primary": "#b2c5ff",
+                "on-secondary-fixed-variant": "#004f54",
+                "surface-container-low": "#f2f4f6",
+                "error-container": "#ffdad6",
+                "primary-container": "#0052cc"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "stack-md": "12px",
+                "stack-lg": "24px",
+                "section-gap": "40px",
+                "container-margin": "20px",
+                "base": "8px",
+                "stack-sm": "4px",
+                "gutter": "16px"
+            },
+            "fontFamily": {
+                "display-lg": ["Sora"],
+                "headline-md": ["Sora"],
+                "data-display": ["Sora"],
+                "label-md": ["Hanken Grotesk"],
+                "body-lg": ["Hanken Grotesk"],
+                "headline-lg-mobile": ["Sora"],
+                "headline-lg": ["Sora"],
+                "body-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                "data-display": ["24px", {"lineHeight": "24px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .ai-glow {
+            box-shadow: 0 0 15px rgba(0, 241, 254, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased min-h-screen pb-32">
+<!-- Standardized TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30">
+<div class="flex justify-between items-center px-container-margin h-14 w-full max-w-md mx-auto">
+<button class="w-10 h-10 flex items-center justify-center rounded-full active:bg-surface-container-high transition-colors text-primary">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-display text-[18px] text-primary font-semibold truncate max-w-[240px] text-center">Sesi Lari Pagi Adaptif</h1>
+<button class="w-10 h-10 flex items-center justify-center rounded-full active:bg-surface-container-high transition-colors text-primary">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</header>
+<main class="max-w-md mx-auto pt-16">
+<!-- Hero Visual Section -->
+<section class="relative w-full aspect-[4/3] overflow-hidden">
+<img alt="Runner at sunrise" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBko03qnBvb1rzJ0ITi0wB8DYFw-ewBnaEWFlaQEEgkcvLslhWnnVH_ztMbFoKFkqjxEAKsk14qX_y8pg45l4NYAu8catWBfI1em3miOESAVGNXQwWOsgyqg4OtZvea3ty4YUivc4CC3gzhhUa4gxiJ6TwF5zzBG_BEL_qPRfL9sx3HvL0dtClpVkGp9vKYQuYhMmEnBMBYPpB538B1oa5-GCOIOXa6DwM9dGb6Vo86InjlXGiGna6tlsq9TgSwpeW2H-Phq7qIR_hw">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-12 left-container-margin">
+<div class="inline-flex items-center gap-2 bg-secondary-container px-3 py-1.5 rounded-full text-on-secondary-container ai-glow">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-label-md text-xs uppercase tracking-wider">Optimasi AI Aktif</span>
+</div>
+</div>
+</section>
+<!-- AI Insights Section -->
+<section class="px-container-margin -mt-8 relative z-10">
+<div class="bg-surface-container-lowest border border-outline-variant/50 rounded-lg p-stack-lg shadow-sm text-center">
+<h2 class="font-display text-lg font-bold text-on-surface mb-stack-md">Panduan Cerdas AI</h2>
+<p class="text-on-surface-variant font-body-md leading-relaxed">
+                    Berdasarkan kualitas tidur semalam (82%) dan pemulihan otot Anda, hari ini fokus pada intensitas sedang. Sesi ini dirancang untuk menjaga momentum tanpa risiko kelelahan berlebih.
+                </p>
+</div>
+</section>
+<!-- Key Metrics Grid -->
+<section class="px-container-margin mt-stack-lg grid grid-cols-2 gap-gutter">
+<!-- Metric Card 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant/50 p-4 rounded-lg shadow-sm">
+<div class="flex justify-between items-start mb-2">
+<span class="material-symbols-outlined text-secondary">local_fire_department</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">trending_up</span>
+</div>
+<div class="font-display text-2xl font-extrabold text-primary">450</div>
+<div class="font-label-md text-xs text-on-surface-variant uppercase">Kkal Est.</div>
+</div>
+<!-- Metric Card 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant/50 p-4 rounded-lg shadow-sm">
+<div class="flex justify-between items-start mb-2 text-secondary">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div class="font-display text-2xl font-extrabold text-primary">45<span class="text-sm font-label-md ml-1">min</span></div>
+<div class="font-label-md text-xs text-on-surface-variant uppercase">Target Durasi</div>
+</div>
+</section>
+<!-- Exercise List -->
+<section class="px-container-margin mt-section-gap">
+<h3 class="font-display text-lg font-bold text-on-surface mb-stack-md">Rangkaian Latihan</h3>
+<div class="space-y-stack-md">
+<!-- Item 1 - Visual treatment matched to cards -->
+<div class="flex items-center p-4 bg-surface-container-low rounded-lg border border-outline-variant/50 hover:border-primary/20 transition-all active:scale-[0.98] group shadow-sm">
+<div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-on-primary shadow-sm">
+<span class="material-symbols-outlined">directions_walk</span>
+</div>
+<div class="ml-stack-md flex-1">
+<div class="font-display text-md font-semibold text-on-surface">Pemanasan Dinamis</div>
+<div class="font-body-md text-sm text-on-surface-variant">5 Menit • Intensitas Rendah</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center p-4 bg-surface-container-low rounded-lg border border-outline-variant/50 hover:border-primary/20 transition-all active:scale-[0.98] group shadow-sm">
+<div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-on-primary shadow-sm">
+<span class="material-symbols-outlined">directions_run</span>
+</div>
+<div class="ml-stack-md flex-1">
+<div class="font-display text-md font-semibold text-on-surface">Lari Interval Stabil</div>
+<div class="font-body-md text-sm text-on-surface-variant">30 Menit • Intensitas Sedang</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+<!-- Item 3 -->
+<div class="flex items-center p-4 bg-surface-container-low rounded-lg border border-outline-variant/50 hover:border-primary/20 transition-all active:scale-[0.98] group shadow-sm">
+<div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-on-primary shadow-sm">
+<span class="material-symbols-outlined">settings_backup_restore</span>
+</div>
+<div class="ml-stack-md flex-1">
+<div class="font-display text-md font-semibold text-on-surface">Pendinginan &amp; Regangan</div>
+<div class="font-body-md text-sm text-on-surface-variant">10 Menit • Relaksasi</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Action Bar -->
+<footer class="fixed bottom-0 left-0 w-full z-50 px-container-margin py-6 bg-surface/90 backdrop-blur-xl border-t border-outline-variant/30">
+<div class="max-w-md mx-auto">
+<button class="w-full h-14 bg-primary text-on-primary font-display text-lg font-bold rounded-lg shadow-lg active:scale-95 active:shadow-md transition-all duration-200 flex items-center justify-center gap-3">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                Mulai Latihan
+            </button>
+</div>
+</footer>
+<script>
+        // Simple scroll effect for header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+    </script>
+
+
+</body></html>

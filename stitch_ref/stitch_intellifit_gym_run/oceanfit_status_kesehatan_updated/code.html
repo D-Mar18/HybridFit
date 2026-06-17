@@ -1,0 +1,252 @@
+<!DOCTYPE html><html class="light" lang="id" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>OceanFit - Status Kesehatan</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Hanken+Grotesk:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container": "#eceef0",
+                        "secondary-fixed-dim": "#00dbe7",
+                        "on-primary-fixed-variant": "#0040a2",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f2f4f6",
+                        "inverse-surface": "#2d3133",
+                        "on-error-container": "#93000a",
+                        "on-background": "#191c1e",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#b2c5ff",
+                        "outline-variant": "#c3c6d6",
+                        "on-primary-fixed": "#001848",
+                        "on-primary-container": "#c4d2ff",
+                        "primary-fixed": "#dae2ff",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#002022",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#00f1fe",
+                        "tertiary": "#29436b",
+                        "tertiary-fixed-dim": "#aec7f6",
+                        "tertiary-fixed": "#d6e3ff",
+                        "primary-container": "#0052cc",
+                        "inverse-on-surface": "#eff1f3",
+                        "tertiary-container": "#425b84",
+                        "on-tertiary-fixed": "#001b3d",
+                        "on-surface-variant": "#434654",
+                        "secondary-fixed": "#74f5ff",
+                        "surface-dim": "#d8dadc",
+                        "primary": "#003d9b",
+                        "on-surface": "#191c1e",
+                        "surface": "#f7f9fb",
+                        "on-tertiary-container": "#bcd3ff",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#006a70",
+                        "surface-variant": "#e0e3e5",
+                        "background": "#f7f9fb",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "surface-container-highest": "#e0e3e5",
+                        "surface-container-high": "#e6e8ea",
+                        "outline": "#737685",
+                        "surface-tint": "#0c56d0",
+                        "on-tertiary-fixed-variant": "#2d476f",
+                        "on-secondary-fixed-variant": "#004f54",
+                        "surface-bright": "#f7f9fb",
+                        "secondary": "#00696f",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-margin": "20px",
+                        "stack-sm": "4px",
+                        "base": "8px",
+                        "stack-lg": "24px",
+                        "section-gap": "40px",
+                        "stack-md": "12px",
+                        "gutter": "16px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Sora"],
+                        "headline-lg": ["Sora"],
+                        "data-display": ["Sora"],
+                        "body-md": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "display-lg": ["Sora"],
+                        "label-md": ["Hanken Grotesk"],
+                        "headline-md": ["Sora"],
+                        "label-caps": ["Sora"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "data-display": ["24px", {"lineHeight": "24px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "label-caps": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 105, 111, 0.1);
+        }
+        .option-active {
+            border: 2px solid #00696f !important;
+            background: rgba(0, 241, 254, 0.05);
+        }
+        .animate-pulse-slow {
+            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: .7; }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen flex flex-col font-body-md overflow-x-hidden">
+<!-- Header Section -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-container-margin h-16 bg-surface/80 backdrop-blur-xl shadow-sm">
+<button aria-label="Kembali" class="w-10 h-10 flex items-center justify-center rounded-full active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined text-primary" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">Hybrid Fit</h1>
+<div class="w-10"></div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-32 pb-44 px-margin-mobile md:px-margin-desktop flex justify-center">
+<div class="w-full max-w-2xl">
+<!-- Intro Text -->
+<div class="mb-stack-lg">
+<div class="flex justify-between items-end mb-2">
+<span class="font-label-md text-label-md text-primary uppercase tracking-wider">Status Kesehatan</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Langkah 4 dari 4</span>
+</div>
+<div class="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-secondary w-full rounded-full animate-pulse-slow"></div>
+</div>
+</div>
+<section class="mb-section-gap">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-background leading-tight mb-stack-md">
+                Status Kesehatan
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Keamanan Anda adalah prioritas kami. Beritahu kami jika Anda memiliki kondisi kesehatan atau batasan fisik tertentu.
+            </p>
+</section>
+<!-- Survey Options -->
+<div class="space-y-4" id="healthOptions"><!-- Option 1 -->
+<button class="glass-card w-full p-5 rounded-xl text-left transition-all duration-200 active:scale-[0.98] shadow-[0_4px_12px_rgba(0,33,71,0.04)] group border-2 border-transparent" onclick="selectOption(this)">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Tidak ada (Sehat)</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Saya siap melakukan aktivitas fisik intensitas tinggi.</p>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant group-[.option-active]:border-secondary group-[.option-active]:bg-secondary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-white text-[16px] hidden group-[.option-active]:block">check</span>
+</div>
+</div>
+</button>
+<!-- Option 2 -->
+<button class="glass-card w-full p-5 rounded-xl text-left transition-all duration-200 active:scale-[0.98] shadow-[0_4px_12px_rgba(0,33,71,0.04)] group border-2 border-transparent" onclick="selectOption(this)">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Cedera Sendi/Otot</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Cedera pada area bahu, lutut, punggung, atau pergelangan kaki.</p>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant group-[.option-active]:border-secondary group-[.option-active]:bg-secondary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-white text-[16px] hidden group-[.option-active]:block">check</span>
+</div>
+</div>
+</button>
+<!-- Option 3 -->
+<button class="glass-card w-full p-5 rounded-xl text-left transition-all duration-200 active:scale-[0.98] shadow-[0_4px_12px_rgba(0,33,71,0.04)] group border-2 border-transparent" onclick="selectOption(this)">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Kondisi Jantung</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Riwayat hipertensi atau gangguan ritme jantung.</p>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant group-[.option-active]:border-secondary group-[.option-active]:bg-secondary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-white text-[16px] hidden group-[.option-active]:block">check</span>
+</div>
+</div>
+</button>
+<!-- Option 4 -->
+<button class="glass-card w-full p-5 rounded-xl text-left transition-all duration-200 active:scale-[0.98] shadow-[0_4px_12px_rgba(0,33,71,0.04)] group border-2 border-transparent" onclick="selectOption(this)">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Asma/Pernapasan</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Sesak napas saat beraktivitas atau riwayat asma bronkial.</p>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant group-[.option-active]:border-secondary group-[.option-active]:bg-secondary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-white text-[16px] hidden group-[.option-active]:block">check</span>
+</div>
+</div>
+</button>
+<!-- Option 5 -->
+<div class="glass-card w-full p-5 rounded-xl shadow-[0_4px_12px_rgba(0,33,71,0.04)] border-2 border-transparent">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Lainnya (Tuliskan)</h3>
+<input class="w-full bg-transparent border-0 border-b-2 border-outline-variant text-on-surface py-2 focus:ring-0 focus:border-primary transition-all font-body-md" placeholder="Masukkan kondisi kesehatan Anda di sini..." type="text">
+</div></div>
+</div>
+</main>
+<!-- Fixed Footer Actions -->
+<footer class="fixed bottom-0 left-0 w-full p-container-margin bg-surface/90 backdrop-blur-xl z-50">
+<div class="max-w-md mx-auto flex flex-col gap-4">
+<button class="w-full h-14 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-headline-md flex items-center justify-center gap-2 shadow-lg active:scale-95 transition-all duration-200 animate-pulse-slow" id="finish-btn">SELESAI<span class="material-symbols-outlined" data-icon="rocket_launch">rocket_launch</span>
+</button>
+
+
+</div>
+</footer>
+<script>
+    function toggleSelect(element) {
+        const options = document.querySelectorAll('#healthOptions button');
+        
+        // Logic for "Tidak ada (Sehat)" - if selected, unselect others
+        const isHealthy = element.querySelector('h3').textContent.includes("Tidak ada");
+        
+        if (isHealthy) {
+            options.forEach(opt => opt.classList.remove('health-card-selected'));
+            element.classList.add('health-card-selected');
+        } else {
+            // If selecting a condition, make sure "Healthy" is unselected
+            options.forEach(opt => {
+                if (opt.querySelector('h3').textContent.includes("Tidak ada")) {
+                    opt.classList.remove('health-card-selected');
+                }
+            });
+            element.classList.toggle('health-card-selected');
+        }
+        
+        // Haptic feedback simulation
+        if (window.navigator.vibrate) {
+            window.navigator.vibrate(10);
+        }
+    }
+</script>
+
+
+
+
+
+
+</body></html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html><html class="light" lang="id" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>OceanFit - Tingkat Pengalaman</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600&amp;family=Sora:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#aec7f6",
+                        "secondary-fixed-dim": "#00dbe7",
+                        "inverse-primary": "#b2c5ff",
+                        "surface-variant": "#e0e3e5",
+                        "surface": "#f7f9fb",
+                        "secondary-fixed": "#74f5ff",
+                        "on-primary-container": "#c4d2ff",
+                        "on-primary-fixed-variant": "#0040a2",
+                        "primary": "#003d9b",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "tertiary": "#29436b",
+                        "on-tertiary-fixed": "#001b3d",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#2d476f",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-background": "#191c1e",
+                        "on-secondary-container": "#006a70",
+                        "secondary-container": "#00f1fe",
+                        "outline-variant": "#c3c6d6",
+                        "on-tertiary-container": "#bcd3ff",
+                        "on-secondary": "#ffffff",
+                        "outline": "#737685",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#002022",
+                        "surface-bright": "#f7f9fb",
+                        "on-secondary-fixed-variant": "#004f54",
+                        "background": "#f7f9fb",
+                        "surface-dim": "#d8dadc",
+                        "surface-tint": "#0c56d0",
+                        "primary-container": "#0052cc",
+                        "on-primary-fixed": "#001848",
+                        "error": "#ba1a1a",
+                        "surface-container": "#eceef0",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#eff1f3",
+                        "primary-fixed": "#dae2ff",
+                        "on-surface-variant": "#434654",
+                        "surface-container-low": "#f2f4f6",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e6e8ea",
+                        "tertiary-fixed": "#d6e3ff",
+                        "secondary": "#00696f",
+                        "on-surface": "#191c1e",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "tertiary-container": "#425b84",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "16px",
+                        "stack-sm": "4px",
+                        "stack-lg": "24px",
+                        "stack-md": "12px",
+                        "base": "8px",
+                        "section-gap": "40px",
+                        "container-margin": "20px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Hanken Grotesk"],
+                        "data-display": ["Sora"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-md": ["Sora"],
+                        "headline-lg": ["Sora"],
+                        "display-lg": ["Sora"],
+                        "headline-lg-mobile": ["Sora"],
+                        "body-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "data-display": ["24px", {"lineHeight": "24px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 219, 231, 0.1);
+        }
+        .animate-flow {
+            background: linear-gradient(90deg, #003d9b, #00dbe7, #003d9b);
+            background-size: 200% 100%;
+            animation: flow 4s linear infinite;
+        }
+        @keyframes flow {
+            0% { background-position: 100% 0%; }
+            100% { background-position: -100% 0%; }
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col font-body-md">
+<!-- TopAppBar (Mapped from Shared Component JSON) -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-container-margin h-16 bg-surface/80 backdrop-blur-xl shadow-sm">
+<button class="w-12 h-12 flex items-center justify-start text-primary active:scale-95 duration-200 transition-transform">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">Hybrid Fit</h1>
+<button class="w-12 h-12 flex items-center justify-end text-on-surface-variant active:scale-95 duration-200 transition-transform">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</header>
+<!-- Main Canvas -->
+<main class="flex-grow pt-24 pb-32 px-container-margin max-w-lg mx-auto w-full">
+<!-- Progress Bar Section -->
+<div class="mb-stack-lg">
+<div class="flex justify-between items-end mb-2">
+<span class="font-label-md text-label-md text-primary">Langkah 2 dari 4</span>
+<span class="font-label-md text-label-md text-outline">Tingkat Pengalaman</span>
+</div>
+<!-- Progress Bar Shell (Dual-tone from Style Guidance) -->
+<div class="h-2 w-full bg-secondary-fixed/10 rounded-full overflow-hidden">
+<div class="h-full w-2/3 bg-secondary-fixed shadow-[0_0_8px_rgba(0,219,231,0.5)] rounded-full transition-all duration-700 ease-out"></div>
+</div>
+</div>
+<!-- Question Header -->
+<section class="mb-section-gap">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-stack-md">Apa tingkat pengalaman olahraga Anda?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Pilih yang paling sesuai dengan aktivitas fisik Anda dalam setahun terakhir untuk membantu OceanFit AI menyusun program yang presisi.</p>
+</section>
+<!-- Experience Options (Asymmetric Layout/Bento Inspired) -->
+<div class="space-y-4">
+<!-- Option: Pemula -->
+<label class="relative block group cursor-pointer">
+<input checked="" class="peer sr-only" name="experience" type="radio" value="pemula">
+<div class="glass-card p-stack-lg rounded-xl transition-all duration-300 peer-checked:border-secondary peer-checked:ring-2 peer-checked:ring-secondary/20 peer-checked:bg-secondary-container/5 hover:bg-surface-container-low shadow-sm group-active:scale-[0.98]">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center text-primary shrink-0 transition-colors group-hover:bg-primary group-hover:text-white">
+<span class="material-symbols-outlined" data-icon="water_drop">water_drop</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-center mb-1">
+<h3 class="font-headline-md text-headline-md text-on-surface">Pemula</h3>
+<div class="w-5 h-5 rounded-full border-2 border-outline-variant flex items-center justify-center peer-checked:bg-secondary peer-checked:border-secondary transition-all">
+<div class="w-2 h-2 bg-white rounded-full opacity-0 peer-checked:opacity-100"></div>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Baru memulai atau kembali setelah istirahat cukup lama.</p>
+</div>
+</div>
+</div>
+</label>
+<!-- Option: Menengah -->
+<label class="relative block group cursor-pointer">
+<input class="peer sr-only" name="experience" type="radio" value="menengah">
+<div class="glass-card p-stack-lg rounded-xl transition-all duration-300 peer-checked:border-secondary peer-checked:ring-2 peer-checked:ring-secondary/20 peer-checked:bg-secondary-container/5 hover:bg-surface-container-low shadow-sm group-active:scale-[0.98]">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-lg bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed shrink-0 transition-colors group-hover:bg-secondary group-hover:text-white">
+<span class="material-symbols-outlined" data-icon="waves">waves</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-center mb-1">
+<h3 class="font-headline-md text-headline-md text-on-surface">Menengah</h3>
+<div class="w-5 h-5 rounded-full border-2 border-outline-variant flex items-center justify-center peer-checked:bg-secondary peer-checked:border-secondary transition-all">
+<div class="w-2 h-2 bg-white rounded-full opacity-0 peer-checked:opacity-100"></div>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Sudah rutin berlatih selama 6-12 bulan dengan intensitas sedang.</p>
+</div>
+</div>
+</div>
+</label>
+<!-- Option: Mahir -->
+<label class="relative block group cursor-pointer">
+<input class="peer sr-only" name="experience" type="radio" value="mahir">
+<div class="glass-card p-stack-lg rounded-xl transition-all duration-300 peer-checked:border-secondary peer-checked:ring-2 peer-checked:ring-secondary/20 peer-checked:bg-secondary-container/5 hover:bg-surface-container-low shadow-sm group-active:scale-[0.98]">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-lg bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed shrink-0 transition-colors group-hover:bg-tertiary group-hover:text-white">
+<span class="material-symbols-outlined" data-icon="tsunami">tsunami</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-center mb-1">
+<h3 class="font-headline-md text-headline-md text-on-surface">Mahir</h3>
+<div class="w-5 h-5 rounded-full border-2 border-outline-variant flex items-center justify-center peer-checked:bg-secondary peer-checked:border-secondary transition-all">
+<div class="w-2 h-2 bg-white rounded-full opacity-0 peer-checked:opacity-100"></div>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Berlatih konsisten lebih dari 1 tahun dengan teknik yang baik dan pemahaman mendalam.</p>
+</div>
+</div>
+</div>
+</label>
+</div>
+<!-- AI Recommendation Badge (Style Guidance Requirement) -->
+
+</main>
+<!-- Bottom Navigation Area (Action Bar for Onboarding) -->
+<div class="fixed bottom-0 left-0 w-full p-container-margin bg-surface/90 backdrop-blur-md z-40">
+<div class="max-w-lg mx-auto flex gap-4">
+<button class="flex-1 h-14 rounded-xl border border-outline-variant font-label-md text-label-md text-on-surface active:bg-surface-container-high transition-colors">
+                Kembali
+            </button>
+<button class="flex-[2] h-14 rounded-xl font-headline-md text-white shadow-lg active:scale-95 transition-transform bg-primary-container font-label-md text-label-md">
+                Lanjutkan
+            </button>
+</div>
+</div>
+<!-- Visual Polish: Ambient Flow Background -->
+<div class="fixed -z-10 inset-0 pointer-events-none opacity-20">
+<div class="absolute top-1/4 -left-20 w-80 h-80 bg-primary-container rounded-full blur-[120px]"></div>
+<div class="absolute bottom-1/4 -right-20 w-80 h-80 bg-secondary-container rounded-full blur-[120px]"></div>
+</div>
+<script>
+        // Micro-interaction for active selection glow
+        document.querySelectorAll('input[name="experience"]').forEach(input => {
+            input.addEventListener('change', (e) => {
+                document.querySelectorAll('.glass-card').forEach(card => {
+                    card.classList.remove('shadow-[0_0_20px_rgba(0,219,231,0.15)]');
+                });
+                if (e.target.checked) {
+                    e.target.nextElementSibling.classList.add('shadow-[0_0_20px_rgba(0,219,231,0.15)]');
+                }
+            });
+        });
+    </script>
+
+
+
+
+
+
+</body></html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
+<title>OceanFit - Detail Latihan Gym</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Hanken+Grotesk:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#f7f9fb",
+                        "secondary-fixed-dim": "#00dbe7",
+                        "surface-container-low": "#f2f4f6",
+                        "on-tertiary-fixed-variant": "#2d476f",
+                        "inverse-primary": "#b2c5ff",
+                        "on-surface": "#191c1e",
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "tertiary-fixed": "#d6e3ff",
+                        "tertiary-container": "#425b84",
+                        "on-primary-container": "#c4d2ff",
+                        "surface-container-high": "#e6e8ea",
+                        "surface-tint": "#0c56d0",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#00f1fe",
+                        "primary-fixed": "#dae2ff",
+                        "on-tertiary-container": "#bcd3ff",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "tertiary": "#29436b",
+                        "inverse-on-surface": "#eff1f3",
+                        "background": "#f7f9fb",
+                        "surface-container": "#eceef0",
+                        "primary": "#003d9b",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-surface-variant": "#434654",
+                        "tertiary-fixed-dim": "#aec7f6",
+                        "surface-variant": "#e0e3e5",
+                        "secondary-fixed": "#74f5ff",
+                        "on-primary": "#ffffff",
+                        "secondary": "#00696f",
+                        "on-secondary-container": "#006a70",
+                        "surface-dim": "#d8dadc",
+                        "on-tertiary-fixed": "#001b3d",
+                        "on-secondary-fixed-variant": "#004f54",
+                        "surface-bright": "#f7f9fb",
+                        "on-primary-fixed-variant": "#0040a2",
+                        "on-background": "#191c1e",
+                        "outline-variant": "#c3c6d6",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed": "#002022",
+                        "on-primary-fixed": "#001848",
+                        "outline": "#737685",
+                        "primary-container": "#0052cc",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "16px",
+                        "stack-md": "12px",
+                        "section-gap": "40px",
+                        "base": "8px",
+                        "stack-sm": "4px",
+                        "stack-lg": "24px",
+                        "container-margin": "20px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "label-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Sora"],
+                        "data-display": ["Sora"],
+                        "headline-md": ["Sora"],
+                        "headline-lg-mobile": ["Sora"],
+                        "display-lg": ["Sora"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "data-display": ["24px", {"lineHeight": "24px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 82, 204, 0.1);
+        }
+        .ocean-gradient {
+            background: linear-gradient(135deg, #003d9b 0%, #00696f 100%);
+        }
+        .hero-glow {
+            box-shadow: 0 8px 30px rgba(0, 82, 204, 0.08);
+        }
+        body {
+            background-color: #f7f9fb;
+            color: #191c1e;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>.btn-completed { background-color: white !important; color: #434654 !important; border: 1px solid #c3c6d6 !important; pointer-events: none; transition: all 0.3s ease; }</style></head>
+<body class="font-body-md text-on-background min-h-screen pb-32">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-lg border-b border-outline-variant/30 h-16 flex items-center px-container-margin justify-between">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high/50 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-primary">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-[20px] text-primary tracking-tight">Detail Latihan Gym</h1>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high/50 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-primary">more_vert</span>
+</button>
+</nav>
+<!-- Main Canvas -->
+<main class="mt-20 px-container-margin max-w-lg mx-auto">
+<!-- Date Header -->
+<div class="mb-stack-lg animate-in fade-in slide-in-from-bottom-2 duration-700">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+<p class="font-label-md text-label-md">13 Jan 2024 • 05:30 PM</p>
+</div>
+</div>
+<!-- Hero Metric Section -->
+<section class="mb-stack-lg animate-in fade-in slide-in-from-bottom-4 duration-700 transition-all">
+<div class="glass-card rounded-xl p-stack-lg hero-glow flex flex-col items-center text-center">
+<span class="font-label-md text-primary uppercase tracking-widest mb-1">Total Volume</span>
+<div class="flex items-baseline gap-1">
+<h2 class="font-display-lg text-display-lg text-primary">4,500</h2>
+<span class="font-headline-md text-on-surface-variant">kg</span>
+</div>
+<div class="mt-4 flex items-center gap-2 bg-secondary-container/20 px-3 py-1 rounded-full">
+<span class="material-symbols-outlined text-secondary text-[16px]" style="font-variation-settings: &quot;FILL&quot; 1;">auto_awesome</span>
+<span class="font-label-md text-on-secondary-container">New Personal Record!</span>
+</div>
+</div>
+</section>
+<!-- Summary Grid -->
+<section class="grid grid-cols-3 gap-3 mb-stack-lg animate-in fade-in slide-in-from-bottom-6 duration-700 transition-all">
+<div class="glass-card rounded-xl p-3 flex flex-col items-center justify-center border-b-2 border-b-primary/20">
+<span class="material-symbols-outlined text-primary mb-1">timer</span>
+<p class="font-data-display text-primary text-[18px]">60:15</p>
+<p class="font-label-md text-on-surface-variant text-[10px]">DURATION</p>
+</div>
+<div class="glass-card rounded-xl p-3 flex flex-col items-center justify-center border-b-2 border-b-secondary/20">
+<span class="material-symbols-outlined text-secondary mb-1">local_fire_department</span>
+<p class="font-data-display text-secondary text-[18px]">520</p>
+<p class="font-label-md text-on-surface-variant text-[10px]">KCAL</p>
+</div>
+</section>
+<!-- Visual Context Section -->
+<section class="mb-stack-lg rounded-xl overflow-hidden relative h-48 group animate-in fade-in slide-in-from-bottom-8 duration-700 transition-all">
+<img alt="Upper Body Focus" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A cinematic, high-contrast close-up of a modern gymnasium interior with a focus on polished upper body strength equipment. The lighting is moody and professional, featuring cool blue ambient glows and soft shadows that emphasize the sleek textures of chrome and matte black steel. The overall aesthetic is clean, premium, and data-driven, perfectly aligning with a high-end fitness brand identity in light-mode." src="https://lh3.googleusercontent.com/aida-public/AB6AXuClwXH-7h0zcTecdxPjVcs3DeoRxti2VO5nAdzI2iv1QB4n9sCphOh9QZ0N08l3LqP6IiP1i-elJPEEolczI8mBVnBOItc1bHz4XQwevrDTPEtaS6X_eEQiaWBqTGvXg8s-AGRMy1WknrS6Vp4tNVUQAZ_k6FwlGGVWgMlizwz7wAgD16Obb347JjpGoHGnpTbrvr-nKdWmVLa8dGBHgvWWCVHPYHvHOYhvLz0wjGiZEH37k9WOvl2fR5xD04Pot4owdl3BpEl36hJg">
+<div class="absolute inset-0 ocean-gradient opacity-40"></div>
+<div class="absolute bottom-4 left-4">
+<span class="bg-white/90 backdrop-blur text-primary font-label-md px-3 py-1.5 rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">fitness_center</span>
+                    Focus: Upper Body
+                </span>
+</div>
+</section>
+<!-- Exercise List -->
+<section class="mb-stack-lg animate-in fade-in slide-in-from-bottom-10 duration-700 transition-all">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-stack-md">Daftar Latihan</h3>
+<div class="space-y-3">
+<!-- Bench Press -->
+<div class="flex flex-col bg-white rounded-xl border border-outline-variant/30 hover:border-primary/40 transition-colors overflow-hidden group/card transition-all"><div class="flex items-center justify-between p-4 cursor-pointer" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.arrow-icon').textContent = this.nextElementSibling.classList.contains('hidden') ? 'keyboard_arrow_down' : 'keyboard_arrow_up'"><div class="flex items-center gap-4"><div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center"><span class="material-symbols-outlined text-primary">layers</span></div><div><p class="font-label-md text-on-surface text-[16px]">Bench Press</p><p class="text-on-surface-variant text-sm">4 Sets • 320kg total</p></div></div><span class="material-symbols-outlined text-outline arrow-icon">keyboard_arrow_down</span></div><div class="p-4 pt-0 border-t border-outline-variant/10 animate-in fade-in slide-in-from-top-2 hidden"><div class="flex flex-col gap-3 mt-3"><div class="grid grid-cols-2 gap-3"><div class="flex flex-col gap-1"><label class="text-[10px] font-label-md text-on-surface-variant uppercase tracking-wider">Sets</label><input class="w-full p-2 rounded-lg border border-outline-variant/30 font-body-md focus:outline-none focus:border-primary" placeholder="2" type="number"></div><div class="flex flex-col gap-1"><label class="text-[10px] font-label-md text-on-surface-variant uppercase tracking-wider">Total kg</label><input class="w-full p-2 rounded-lg border border-outline-variant/30 font-body-md focus:outline-none focus:border-primary" placeholder="1" type="number"></div></div><button class="w-full py-2 bg-primary text-white rounded-lg font-label-md active:scale-95 transition-transform btn-completed" onclick="const card = this.closest('.group\/card'); const inputs = card.querySelectorAll('input'); const isValid = Array.from(inputs).every(i =&gt; i.value &amp;&amp; i.value &gt; 0); if(!isValid) { alert('Mohon isi jumlah Sets dan Total kg'); return; } card.classList.add('bg-secondary-container/20', 'border-secondary/30', 'text-on-secondary-container', 'duration-700'); card.classList.remove('bg-white'); this.classList.add('btn-completed'); this.innerHTML = 'Selesai &lt;span class=&quot;material-symbols-outlined&quot; style=&quot;color: #00696f; vertical-align: middle; margin-left: 4px;&quot;&gt;check&lt;/span&gt;'; card.querySelectorAll('.material-symbols-outlined:not(.arrow-icon)').forEach(icon =&gt; icon.classList.add('text-secondary'));">Selesai <span class="material-symbols-outlined" style="color: rgb(0, 105, 111); vertical-align: middle; margin-left: 4px;">check</span></button></div></div></div>
+<!-- Squat -->
+<div class="flex flex-col bg-white rounded-xl border border-outline-variant/30 hover:border-primary/40 transition-colors overflow-hidden group/card transition-all"><div class="flex items-center justify-between p-4 cursor-pointer" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.arrow-icon').textContent = this.nextElementSibling.classList.contains('hidden') ? 'keyboard_arrow_down' : 'keyboard_arrow_up'"><div class="flex items-center gap-4"><div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center"><span class="material-symbols-outlined text-secondary">accessibility_new</span></div><div><p class="font-label-md text-on-surface text-[16px]">Squat</p><p class="text-on-surface-variant text-sm">3 Sets • 450kg total</p></div></div><span class="material-symbols-outlined text-outline arrow-icon">keyboard_arrow_up</span></div><div class="p-4 pt-0 border-t border-outline-variant/10 animate-in fade-in slide-in-from-top-2"><div class="flex flex-col gap-3 mt-3"><div class="grid grid-cols-2 gap-3"><div class="flex flex-col gap-1"><label class="text-[10px] font-label-md text-on-surface-variant uppercase tracking-wider">Sets</label><input class="w-full p-2 rounded-lg border border-outline-variant/30 font-body-md focus:outline-none focus:border-primary" placeholder="2" type="number"></div><div class="flex flex-col gap-1"><label class="text-[10px] font-label-md text-on-surface-variant uppercase tracking-wider">Total kg</label><input class="w-full p-2 rounded-lg border border-outline-variant/30 font-body-md focus:outline-none focus:border-primary" placeholder="2" type="number"></div></div><button class="w-full py-2 bg-primary text-white rounded-lg font-label-md active:scale-95 transition-transform" onclick="const card = this.closest('.group\/card'); const inputs = card.querySelectorAll('input'); const isValid = Array.from(inputs).every(i =&gt; i.value &amp;&amp; i.value &gt; 0); if(!isValid) { alert('Mohon isi jumlah Sets dan Total kg'); return; } card.classList.add('bg-secondary-container/20', 'border-secondary/30', 'text-on-secondary-container', 'duration-700'); card.classList.remove('bg-white'); this.classList.add('btn-completed'); this.innerHTML = 'Selesai &lt;span class=&quot;material-symbols-outlined&quot; style=&quot;color: #00696f; vertical-align: middle; margin-left: 4px;&quot;&gt;check&lt;/span&gt;'; card.querySelectorAll('.material-symbols-outlined:not(.arrow-icon)').forEach(icon =&gt; icon.classList.add('text-secondary'));">Selesai</button></div></div></div>
+<!-- Deadlift -->
+<div class="flex flex-col bg-white rounded-xl border border-outline-variant/30 hover:border-primary/40 transition-colors overflow-hidden group/card transition-all"><div class="flex items-center justify-between p-4 cursor-pointer" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.arrow-icon').textContent = this.nextElementSibling.classList.contains('hidden') ? 'keyboard_arrow_down' : 'keyboard_arrow_up'"><div class="flex items-center gap-4"><div class="w-12 h-12 rounded-full bg-tertiary-container/10 flex items-center justify-center"><span class="material-symbols-outlined text-tertiary">fitness_center</span></div><div><p class="font-label-md text-on-surface text-[16px]">Deadlift</p><p class="text-on-surface-variant text-sm">3 Sets • 600kg total</p></div></div><span class="material-symbols-outlined text-outline arrow-icon">keyboard_arrow_up</span></div><div class="p-4 pt-0 border-t border-outline-variant/10 animate-in fade-in slide-in-from-top-2"><div class="flex flex-col gap-3 mt-3"><div class="grid grid-cols-2 gap-3"><div class="flex flex-col gap-1"><label class="text-[10px] font-label-md text-on-surface-variant uppercase tracking-wider">Sets</label><input class="w-full p-2 rounded-lg border border-outline-variant/30 font-body-md focus:outline-none focus:border-primary" placeholder="0" type="number"></div><div class="flex flex-col gap-1"><label class="text-[10px] font-label-md text-on-surface-variant uppercase tracking-wider">Total kg</label><input class="w-full p-2 rounded-lg border border-outline-variant/30 font-body-md focus:outline-none focus:border-primary" placeholder="0" type="number"></div></div><button class="w-full py-2 bg-primary text-white rounded-lg font-label-md active:scale-95 transition-transform" onclick="const card = this.closest('.group\/card'); const inputs = card.querySelectorAll('input'); const isValid = Array.from(inputs).every(i =&gt; i.value &amp;&amp; i.value &gt; 0); if(!isValid) { alert('Mohon isi jumlah Sets dan Total kg'); return; } card.classList.add('bg-secondary-container/20', 'border-secondary/30', 'text-on-secondary-container', 'duration-700'); card.classList.remove('bg-white'); this.classList.add('btn-completed'); this.innerHTML = 'Selesai &lt;span class=&quot;material-symbols-outlined&quot; style=&quot;color: #00696f; vertical-align: middle; margin-left: 4px;&quot;&gt;check&lt;/span&gt;'; card.querySelectorAll('.material-symbols-outlined:not(.arrow-icon)').forEach(icon =&gt; icon.classList.add('text-secondary'));">Selesai</button></div></div></div>
+</div>
+</section>
+<!-- AI Insights -->
+<section class="mb-section-gap animate-in fade-in slide-in-from-bottom-12 duration-700 transition-all">
+<div class="p-5 rounded-2xl bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/10 relative overflow-hidden">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-secondary/10 rounded-full blur-2xl"></div>
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-secondary text-[20px]" style="font-variation-settings: &quot;FILL&quot; 1;">auto_awesome</span>
+<h4 class="font-label-md text-secondary uppercase tracking-wider">Ocean Insights</h4>
+</div>
+<p class="font-body-md text-on-surface-variant leading-relaxed">
+                    Performa angkatan squat kamu naik 15% dari minggu lalu! Pastikan untuk melakukan pendinginan selama 10 menit untuk mempercepat pemulihan otot kaki hari ini.
+                </p>
+</div>
+</section>
+</main>
+<!-- Bottom Action Bar -->
+<div class="fixed bottom-0 left-0 w-full p-container-margin bg-white/80 backdrop-blur-xl border-t border-outline-variant/20 z-50">
+<button class="w-full h-14 ocean-gradient rounded-xl flex items-center justify-center gap-2 text-white font-headline-md text-[16px] active:scale-[0.98] transition-transform duration-200 shadow-lg shadow-primary/20">
+
+            Selesai</button>
+</div>
+<!-- Micro-interaction Script -->
+<script>
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('touchstart', () => {
+                card.style.transform = 'scale(0.98)';
+            });
+            card.addEventListener('touchend', () => {
+                card.style.transform = 'scale(1)';
+            });
+        });
+
+        // Simple Fade-in Observer
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700');
+        });
+    </script>
+
+
+
+
+
+
+</body></html>

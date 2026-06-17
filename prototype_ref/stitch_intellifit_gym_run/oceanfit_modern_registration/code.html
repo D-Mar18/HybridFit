@@ -1,0 +1,265 @@
+<!DOCTYPE html><html class="light" lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>OceanFit - Daftar Sekarang</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Hanken+Grotesk:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+          tailwind.config = {
+            darkMode: "class",
+            theme: {
+              extend: {
+                "colors": {
+                        "surface-dim": "#d8dadc",
+                        "surface": "#f7f9fb",
+                        "outline": "#737685",
+                        "on-surface-variant": "#434654",
+                        "tertiary-fixed-dim": "#aec7f6",
+                        "surface-container-low": "#f2f4f6",
+                        "secondary-container": "#00f1fe",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "on-tertiary-container": "#bcd3ff",
+                        "surface-container": "#eceef0",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#001b3d",
+                        "on-primary-fixed-variant": "#0040a2",
+                        "on-tertiary-fixed-variant": "#2d476f",
+                        "on-secondary-fixed": "#002022",
+                        "surface-tint": "#0c56d0",
+                        "inverse-on-surface": "#eff1f3",
+                        "secondary-fixed": "#74f5ff",
+                        "on-secondary-container": "#006a70",
+                        "tertiary-fixed": "#d6e3ff",
+                        "on-tertiary": "#ffffff",
+                        "surface-variant": "#e0e3e5",
+                        "on-primary-container": "#c4d2ff",
+                        "on-primary-fixed": "#001848",
+                        "tertiary": "#29436b",
+                        "inverse-primary": "#b2c5ff",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-background": "#191c1e",
+                        "primary": "#003d9b",
+                        "on-error": "#ffffff",
+                        "primary-container": "#0052cc",
+                        "surface-container-highest": "#e0e3e5",
+                        "surface-bright": "#f7f9fb",
+                        "background": "#f7f9fb",
+                        "primary-fixed": "#dae2ff",
+                        "secondary-fixed-dim": "#00dbe7",
+                        "outline-variant": "#c3c6d6",
+                        "on-secondary": "#ffffff",
+                        "tertiary-container": "#425b84",
+                        "on-secondary-fixed-variant": "#004f54",
+                        "inverse-surface": "#2d3133",
+                        "secondary": "#00696f",
+                        "on-surface": "#191c1e",
+                        "surface-container-high": "#e6e8ea"
+                },
+                "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                },
+                "spacing": {
+                        "stack-sm": "4px",
+                        "stack-md": "12px",
+                        "stack-lg": "24px",
+                        "gutter": "16px",
+                        "section-gap": "48px",
+                        "container-margin": "24px",
+                        "base": "8px"
+                },
+                "fontFamily": {
+                        "data-display": ["Sora"],
+                        "headline-lg": ["Sora"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Sora"],
+                        "label-md": ["Hanken Grotesk"],
+                        "headline-md": ["Sora"],
+                        "display-lg": ["Sora"],
+                        "body-lg": ["Hanken Grotesk"]
+                },
+                "fontSize": {
+                        "data-display": ["24px", {"lineHeight": "24px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                }
+              },
+            },
+          }
+        </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .premium-card {
+            background: #ffffff;
+            box-shadow: 0 10px 40px -10px rgba(0, 61, 155, 0.08);
+        }
+        .ocean-gradient-btn {
+            background: linear-gradient(135deg, #003d9b 0%, #00696f 100%);
+            box-shadow: 0 8px 20px -6px rgba(0, 61, 155, 0.4);
+        }
+        .ocean-gradient-btn:hover {
+            filter: brightness(1.05);
+            box-shadow: 0 10px 24px -4px rgba(0, 61, 155, 0.5);
+            transform: translateY(-1px);
+        }
+        .floating-label-group {
+            position: relative;
+        }
+        .floating-label-group input {
+            padding: 24px 16px 8px 16px;
+        }
+        .floating-label-group label {
+            position: absolute;
+            top: 50%;
+            left: 16px;
+            transform: translateY(-50%);
+            transition: all 0.2s ease-in-out;
+            pointer-events: none;
+            color: #737685;
+        }
+        .floating-label-group input:focus + label,
+        .floating-label-group input:not(:placeholder-shown) + label {
+            top: 14px;
+            font-size: 11px;
+            color: #003d9b;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .floating-label-group .icon-right {
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #c3c6d6;
+            pointer-events: none;
+        }
+        .floating-accent {
+            animation: float 8s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden selection:bg-secondary-fixed-dim selection:text-on-secondary-fixed">
+<!-- Top AppBar (Simplified for focus) -->
+<header class="flex items-center justify-between px-container-margin h-20 w-full absolute top-0 z-50">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 bg-primary/5 rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[28px]" data-icon="waves">waves</span>
+</div>
+<span class="font-headline-md text-headline-md font-extrabold tracking-tight text-primary">HybridFit</span>
+</div>
+</header>
+<main class="min-h-screen relative flex flex-col items-center justify-center pt-24 pb-16 px-container-margin">
+<!-- Softer Background Accents -->
+<div class="absolute inset-0 overflow-hidden -z-10">
+<div class="absolute top-[10%] right-[-5%] w-[450px] h-[450px] bg-secondary-container/15 rounded-full blur-[120px] floating-accent"></div>
+<div class="absolute bottom-[10%] left-[-10%] w-[400px] h-[400px] bg-primary-fixed/20 rounded-full blur-[100px] floating-accent" style="animation-delay: -4s;"></div>
+</div>
+<div class="w-full max-w-md">
+<!-- Header Section -->
+<div class="text-center mb-10">
+<h1 class="font-headline-lg-mobile text-display-lg text-primary leading-tight mb-3">Registrasi Akun Baru</h1>
+<p class="font-body-md text-on-surface-variant max-w-[80%] mx-auto">Mulai perjalanan transformatif Anda bersama komunitas OceanFit hari ini.</p>
+</div>
+<!-- Registration Form Card -->
+<div class="premium-card p-10 rounded-xl border border-surface-container/50">
+<form class="space-y-6" id="registrationForm">
+<!-- Full Name -->
+<div class="floating-label-group">
+<input class="w-full bg-surface-container-low border-transparent focus:border-primary/30 focus:ring-0 rounded-lg transition-all font-body-md placeholder-transparent outline-none border hover:bg-surface-container-high/50" id="fullName" placeholder=" " type="text">
+<label for="fullName" class="">Nama Lengkap</label>
+<span class="material-symbols-outlined icon-right text-[20px]" data-icon="person">person</span>
+</div>
+<!-- Email -->
+<div class="floating-label-group">
+<input class="w-full bg-surface-container-low border-transparent focus:border-primary/30 focus:ring-0 rounded-lg transition-all font-body-md placeholder-transparent outline-none border hover:bg-surface-container-high/50" id="email" placeholder=" " type="email">
+<label for="email" class="">Email</label>
+<span class="material-symbols-outlined icon-right text-[20px]" data-icon="mail">mail</span>
+</div>
+<!-- Password -->
+<div class="floating-label-group">
+<input class="w-full bg-surface-container-low border-transparent focus:border-primary/30 focus:ring-0 rounded-lg transition-all font-body-md placeholder-transparent outline-none border hover:bg-surface-container-high/50" id="password" placeholder=" " type="password">
+<label for="password" class="">Kata Sandi</label>
+<span class="material-symbols-outlined icon-right text-[20px] cursor-pointer pointer-events-auto hover:text-primary transition-colors" data-icon="visibility" id="togglePassword">visibility</span>
+</div>
+<!-- Confirm Password -->
+<div class="floating-label-group">
+<input class="w-full bg-surface-container-low border-transparent focus:border-primary/30 focus:ring-0 rounded-lg transition-all font-body-md placeholder-transparent outline-none border hover:bg-surface-container-high/50" id="confirmPassword" placeholder=" " type="password">
+<label for="confirmPassword" class="">Konfirmasi Kata Sandi</label>
+<span class="material-symbols-outlined icon-right text-[20px]" data-icon="lock">lock</span>
+</div>
+<!-- CTA Button -->
+<div class="pt-2">
+<button class="ocean-gradient-btn w-full h-[56px] rounded-full text-white font-headline-md text-body-lg font-bold transition-all flex items-center justify-center gap-2" type="submit">
+<span class="">Daftar Sekarang</span>
+<span class="material-symbols-outlined text-[20px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</form>
+<!-- Social Footer -->
+<div class="mt-8 pt-8 border-t border-surface-container flex flex-col items-center">
+<p class="font-body-md text-on-surface-variant text-sm">
+                        Sudah punya akun? 
+                        <a class="text-primary font-bold hover:text-primary-container transition-colors ml-1" href="#">Masuk di sini</a>
+</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Refined Bottom Accent -->
+<div class="fixed bottom-0 left-0 w-full overflow-hidden pointer-events-none -z-10" style="height: 120px;">
+<svg class="absolute bottom-0 w-[200%] h-full opacity-[0.03]" preserveAspectRatio="none" viewBox="0 0 1000 100">
+<path d="M0,50 C150,100 350,0 500,50 C650,100 850,0 1000,50 L1000,100 L0,100 Z" fill="#003d9b"></path>
+</svg>
+</div>
+<script>
+        // Password Visibility Toggle
+        const toggleIcon = document.getElementById('togglePassword');
+        const passwordInput = document.getElementById('password');
+        
+        if (toggleIcon) {
+            toggleIcon.addEventListener('click', () => {
+                const isPassword = passwordInput.getAttribute('type') === 'password';
+                passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
+                toggleIcon.textContent = isPassword ? 'visibility_off' : 'visibility';
+                toggleIcon.classList.toggle('text-primary');
+            });
+        }
+
+        // Form Submit Interaction
+        const form = document.getElementById('registrationForm');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalContent = btn.innerHTML;
+            btn.innerHTML = '<span class="material-symbols-outlined animate-spin" data-icon="progress_activity">progress_activity</span>';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                btn.innerHTML = '<span class="material-symbols-outlined">check_circle</span> <span>Berhasil!</span>';
+                btn.style.background = '#10b981';
+                btn.style.boxShadow = '0 8px 20px -6px rgba(16, 185, 129, 0.4)';
+            }, 1500);
+        });
+    </script>
+
+
+</body></html>
