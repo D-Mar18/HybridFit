@@ -8,5 +8,12 @@
     "backend:start:3001": "set PORT=3001&& npm --prefix backend start",
     "backend:dev": "npm --prefix backend run dev",
     "backend:install": "npm --prefix backend install"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.21.2",
+    "express-validator": "^7.2.1",
+    "google-auth-library": "^9.15.1",
+    "jsonwebtoken": "^9.0.2"
   }
 }
