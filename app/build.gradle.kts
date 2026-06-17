@@ -14,7 +14,7 @@ android {
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
-        buildConfigField("String", "HYBRIDFIT_API_BASE_URL", "\"http://10.0.2.2:3000\"")
+        buildConfigField("String", "HYBRIDFIT_API_BASE_URL", "\"https://backend-hybrid-fit.vercel.app\"")
         buildConfigField(
             "String",
             "GOOGLE_WEB_CLIENT_ID",
